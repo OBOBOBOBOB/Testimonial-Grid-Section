@@ -1,0 +1,136 @@
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-bue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+    font-size: 12px;
+    position: fixed;
+    bottom: 1rem;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--light-grayish-blue);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  padding-block: 5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 29rem;
+}
+
+.card {
+  padding-block: 1.5rem;
+  padding-inline: 1.5rem;
+  color: var(--white);
+  border-radius: 0.5rem;
+}
+
+.profile {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  padding-block-end: 1rem;
+}
+
+.profile-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  justify-content: center;
+}
+
+.profile-img img {
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.card-1 .profile-img img {
+  border: 2px solid hsl(263, 55%, 70%);
+}
+
+.card-4 .profile-img img {
+  border: 2px solid var(--moderate-violet);
+}
+
+.occupation {
+  opacity: 0.5;
+}
+
+.body {
+  display: grid;
+  gap: 1rem;
+}
+
+.main-body {
+  font-weight: 600;
+}
+
+.sub-body {
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.card-1,
+.card-4 {
+  grid-column: span 2;
+}
+
+.card-1 {
+  background-color: var(--moderate-violet);
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: right 5rem top 0;
+}
+
+.card-2 {
+  background-color: var(--very-dark-grayish-bue);
+}
+
+.card-3 {
+  background-color: var(--white);
+}
+
+.card-4 {
+  background-color: var(--very-dark-blackish-blue);
+}
+
+.card-5 {
+  background-color: var(--white);
+  grid-column-start: 4;
+  grid-row: span 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.card-3,
+.card-5 {
+  color: var(--very-dark-grayish-bue);
+}
+
+@media screen and (min-width: 59rem) {
+  .container {
+    display: grid;
+    gap: 1rem;
+    width: min(68rem, 90%);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: transparent;
+  }
+}
